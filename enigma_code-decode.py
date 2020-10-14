@@ -1,19 +1,11 @@
 from pickle import load
 
+
 alphabet = "abcdefghijklmnopqrstuvwxyz._@#$%&[]{},;^!~123456789"
-alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.+-=_@#$%&[]{},;^!~123456789"
 
 f = open("./todays_rotor_state.enigma","rb")
 r1, r2, r3 = load(f)
 f.close()
-
-print(r1,r2,r3,sep="\n")
-
-# r1 = ";%5=lmOQnLd@$W8v3R7qx!~bKp#+gC]hIeVJ{zow-_,U}tFiX491asYPGN^A2r[.M6yDjuHkBfEZ&TcS"
-# r2 = "%c5rSnDv9f+_#-1lGMiRae7t^H[jYJ2&~6@g,Os4UI$ypVQk=uEFhZbLXoN{K.8wPqxm]3B}zT;WC!Ad"
-# r3 = "z%EGq_+aAl~jVKU7nt6$u.HWsfLdi=eSy!RT2]C@,xJgo[cB-YZv}PF39O4;Q^w#5pbk1m8MXD{h&NIr"
-
-print(len(alphabet),len(r1),len(r2), len(r3))
 
 def reflector(char):
 	return alphabet[len(alphabet)-alphabet.rfind(char)-1]

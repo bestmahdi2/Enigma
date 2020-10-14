@@ -1,9 +1,9 @@
 from random import shuffle
 from pickle import dump
 
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+# alphabet = 'abcdefghijklmnopqrstuvwxyz'
 alphabet = "abcdefghijklmnopqrstuvwxyz._@#$%&[]{},;^!~123456789"
-alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.+-=_@#$%&[]{},;^!~123456789"
+# alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.+-=_@#$%&[]{},;^!~123456789"
 
 r1 = list(alphabet)
 shuffle(r1)
